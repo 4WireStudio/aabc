@@ -1,0 +1,39 @@
+.primary-controls {
+  height: 140px;
+  background-color: #fff;
+}
+
+.primary-controls .logo {
+  float: left;
+}
+
+.primary-controls .logo img {
+  max-width: 207px;
+  margin-top: 15px;
+}
+
+.primary-controls .navbar {
+  padding: 0;
+}
+
+.primary-controls .navbar .container {
+  padding: 0;
+  border-left: 1px solid #666;
+}
+
+.primary-controls .navbar ul.navbar-nav > li {
+  @extend .nav-item;
+
+  border-right: 1px solid #666;
+  height: 140px;
+
+  a.nav-link {
+    @extend .nav-link;
+
+    height: 140px;
+    text-transform: uppercase;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 60px;
+  }
+}
