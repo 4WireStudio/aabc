@@ -12,3 +12,13 @@ $container-max-widths: (
   lg: 960px,
   xl: 1200px
 );
+
+/* DEFAULT RADIUS */
+$border-radius: 0;
+
+/* NAVBAR */
+$dropdown-min-width:             230px;
+$dropdown-padding-y:             0.5rem;
+
+$dropdown-item-padding-y:        0.1rem;
+$dropdown-item-padding-x:        1rem;

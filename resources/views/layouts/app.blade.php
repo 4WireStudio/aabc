@@ -5,6 +5,8 @@
     @php(do_action('get_header'))
     @include('partials.top')
     @include('partials.header')
+    @include('partials.home-banner')
+    @include('partials.home-secondary-menu')
     <div class="wrap container" role="document">
       <div class="content">
         <main class="main">

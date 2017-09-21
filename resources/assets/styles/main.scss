@@ -24,6 +24,8 @@
 @import "layouts/pages";
 @import "layouts/posts";
 @import "layouts/tinymce";
+@import "layouts/home-banner";
+@import "layouts/home-secondary-menu";
 
 body {
   @include lato-font-face('medium');

@@ -16,9 +16,13 @@
   padding: 0;
 }
 
-.primary-controls .navbar .container {
-  padding: 0;
+.primary-controls .navbar ul.navbar-nav {
   border-left: 1px solid #666;
+
+  .dropdown-menu {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .primary-controls .navbar ul.navbar-nav > li {

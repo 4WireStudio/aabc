@@ -22,3 +22,26 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+jQuery(document).ready(function(){
+  jQuery('.home-banner').slick({
+    arrows: false,
+    fade: true,
+    dots: false,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 8000,
+  });
+});
+
+// Add Slide Effect to Bootstrap navbar dropdowns
+$('.dropdown').on('show.bs.dropdown', function(){
+  $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
+});
+
+$('.dropdown').on('hide.bs.dropdown', function(){
+  $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+});
+
+// Anchor rightmost navbar items containing dropdowns to rightside of parent
+$('ul.navbar-nav .nav-item:last-child .dropdown-menu').addClass( "dropdown-menu-right" );
