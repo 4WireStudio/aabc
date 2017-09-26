@@ -1,7 +1,13 @@
+.main-wrapper {
+  width: 100%;
+  background: linear-gradient(180deg, $content-gradient, $content-gradient-2 180px), linear-gradient(0deg, $content-gradient, $content-gradient-2 100px);
+}
+
 .wrap.container {
   position: relative;
   z-index: 1;
-  background: rgba(255, 255, 255, 1);
   margin-top: 1px;
-  min-height: 500px;
+  min-height: 300px;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 1);
 }

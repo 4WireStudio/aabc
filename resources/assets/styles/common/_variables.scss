@@ -13,6 +13,16 @@ $container-max-widths: (
   xl: 1200px
 );
 
+/* BRANDING COLORS */
+$branding-dark: #000;
+$branding-orange: #d66f20;
+$border-gray: #666;
+$border-dark: #2d2b2a;
+
+/* GRADIENT COLORS */
+$content-gradient: rgba(113, 108, 105, 1);
+$content-gradient-2: rgba(113, 108, 105, 0);
+
 /* DEFAULT RADIUS */
 $border-radius: 0;
 
@@ -22,3 +32,28 @@ $dropdown-padding-y:             0.5rem;
 
 $dropdown-item-padding-y:        0.1rem;
 $dropdown-item-padding-x:        1rem;
+
+/* MAIN FONT STYLES
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:  "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$font-weight-base: $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+*/
+
+/* HEADINGS */
+$h1-font-size: 24px;
+$h2-font-size: 20px;
+$h3-font-size: 16px;
+$h4-font-size: 14px;
+$h5-font-size: 13px;
+$h6-font-size: 12px;

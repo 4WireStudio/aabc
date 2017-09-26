@@ -14,6 +14,10 @@
 
 .primary-controls .navbar {
   padding: 0;
+
+  &.bg-light {
+    background: #fff !important;
+  }
 }
 
 .primary-controls .navbar ul.navbar-nav {
@@ -21,7 +25,15 @@
 
   .dropdown-menu {
     margin: 0;
+    margin-left: -1px;
     background: rgba(255, 255, 255, 0.8);
+    border-right: 10px solid $branding-orange;
+    border-bottom: 1px solid $border-gray;
+    border-left: 1px solid $border-gray;
+  }
+
+  .dropdown-menu-right {
+    margin-right: -1px;
   }
 }
 
@@ -39,5 +51,6 @@
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 60px;
+    color: $branding-orange;
   }
 }

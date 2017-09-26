@@ -1,0 +1,26 @@
+footer.site-footer {
+  background: #000;
+  color: #fff;
+
+  h3 {
+    padding: 20px 0 7px;
+    border-bottom: 1px solid $border-dark;
+  }
+
+  .widget_nav_menu {
+    ul.menu {
+      list-style-type: none;
+
+      a {
+        color: #fff;
+        font-size: $h5-font-size;
+        text-decoration: none;
+
+        &:hover {
+          color: $branding-orange;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -40,7 +40,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'home_secondary_menu' => __('Home Secondary Menu', 'sage'),
     ]);
 
     /**
@@ -83,8 +84,24 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-primary'
     ] + $config);
     register_sidebar([
-        'name'          => __('Footer', 'sage'),
-        'id'            => 'sidebar-footer'
+        'name'          => __('Footer Primary', 'sage'),
+        'id'            => 'sidebar-footer-primary'
+    ] + $config);
+   register_sidebar([
+        'name'          => __('Footer Secondary 1', 'sage'),
+        'id'            => 'sidebar-footer-secondary-1'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Secondary 2', 'sage'),
+        'id'            => 'sidebar-footer-secondary-2'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Secondary 3', 'sage'),
+        'id'            => 'sidebar-footer-secondary-3'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Footer Secondary 4', 'sage'),
+        'id'            => 'sidebar-footer-secondary-4'
     ] + $config);
 });
 
