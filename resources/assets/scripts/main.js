@@ -44,4 +44,4 @@ $('.dropdown').on('hide.bs.dropdown', function(){
 });
 
 // Anchor rightmost navbar items containing dropdowns to rightside of parent
-$('ul.navbar-nav .nav-item:last-child .dropdown-menu').addClass( "dropdown-menu-right" );
+$('ul#menu-top-main .nav-item:last-child .dropdown-menu').addClass( "dropdown-menu-right" );

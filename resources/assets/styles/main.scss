@@ -26,6 +26,7 @@
 @import "layouts/tinymce";
 @import "layouts/home-banner";
 @import "layouts/home-secondary-menu";
+@import "layouts/featured-image";
 
 body {
   @include lato-font-face('medium');

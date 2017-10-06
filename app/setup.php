@@ -42,6 +42,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'home_secondary_menu' => __('Home Secondary Menu', 'sage'),
+        'home_cta_menu' => __('Home CTA Menu', 'sage'),
     ]);
 
     /**
@@ -82,6 +83,22 @@ add_action('widgets_init', function () {
     register_sidebar([
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Home', 'sage'),
+        'id'            => 'sidebar-home'
+    ] + $config); 
+    register_sidebar([
+        'name'          => __('Top', 'sage'),
+        'id'            => 'sidebar-top'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Bottom', 'sage'),
+        'id'            => 'sidebar-bottom'
+    ] + $config);
+    register_sidebar([
+        'name'          => __('Bottom', 'sage'),
+        'id'            => 'sidebar-bottom'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer Primary', 'sage'),

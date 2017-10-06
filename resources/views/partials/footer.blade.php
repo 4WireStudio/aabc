@@ -14,4 +14,9 @@
         </div>
       </div>
   </div>
+  <div class="bottom">
+    <div class="container bottom-content">
+      @php(dynamic_sidebar('sidebar-bottom'))
+    </div>
+  </div>
 </footer>

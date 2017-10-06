@@ -1,13 +1,115 @@
 .main-wrapper {
   width: 100%;
   background: linear-gradient(180deg, $content-gradient, $content-gradient-2 180px), linear-gradient(0deg, $content-gradient, $content-gradient-2 100px);
+
+  .wrap.container {
+    position: relative;
+    z-index: 1;
+    margin-top: 1px;
+    min-height: 300px;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 1);
+
+    .content {
+      .main {
+        .container-main-content {
+          font-size: $h4-font-size;
+          line-height: 1.45em;
+
+          .widget_nav_menu {
+            h3 {
+              width: 100%;
+              padding: 5px 0 5px 10px;
+              text-transform: uppercase;
+              font-weight: 700;
+              color: #fff;
+              background: linear-gradient(90deg, $branding-orange, #fff 100%);
+            }
+
+            ul {
+              list-style-type: none;
+              -webkit-margin-before: 0;
+              -webkit-margin-after: 0;
+              -webkit-margin-start: 0;
+              -webkit-margin-end: 0;
+              -webkit-padding-start: 0;
+
+              a {
+                display: block;
+                width: 100%;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+
+              li {
+                padding-left: 15px;
+
+                &:hover {
+                  background: linear-gradient(90deg, $gray-200, #fff 100%);
+                }
+              }
+            }
+          }
+        }
+
+        .container-home-content {
+          padding-top: 25px;
+
+          h1 {
+            width: 100%;
+            padding: 20px 15px 15px 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fff;
+            background: linear-gradient(90deg, $branding-orange, #fff 100%);
+          }
+
+          .row {
+            .home-page-content {
+              border-right: 1px solid $border-gray;
+            }
+
+            .home-sidebar-content {
+              h3 {
+                text-transform: uppercase;
+                font-weight: 700;
+              }
+
+              .contact-form {
+                input[type='text'],
+                input[type='email'],
+                textarea {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-.wrap.container {
-  position: relative;
-  z-index: 1;
-  margin-top: 1px;
-  min-height: 300px;
-  padding: 15px 0;
-  background: rgba(255, 255, 255, 1);
+.btn {
+  border-width: 2px;
+  padding: 0.3rem 1rem;
+  font-weight: 700;
+  font-size: $h3-font-size;
+}
+
+.btn-lg {
+  padding: 0.3rem 6rem;
+}
+
+.contact-form {
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    border: 1px solid $border-light;
+    background: $gray-100;
+    padding: 5px;
+    color: $gray-700;
+  }
 }

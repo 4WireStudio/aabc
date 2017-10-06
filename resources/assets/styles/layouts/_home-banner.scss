@@ -36,6 +36,52 @@
   position: relative;
   z-index: 500;
   min-height: 400px;
+
+  .home-cta {
+    width: 380px;
+    height: 60px;
+    position: relative;
+    top: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid $branding-orange;
+
+    ul.navbar-nav {
+      li.menu-item {
+        a {
+          color: $white;
+          padding: 15px;
+          width: 100%;
+          font-size: $h3-font-size;
+
+          &:hover {
+            color: $branding-orange;
+            background: rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        ul.dropdown-menu {
+          background: rgba(0, 0, 0, 0.6);
+          width: 100%;
+
+          li.menu-item {
+            background: none;
+
+            a {
+              color: $white;
+              padding: 3px 0 3px 30px;
+              width: 100%;
+              font-size: $h4-font-size;
+
+              &:hover {
+                color: $branding-orange;
+                background: rgba(0, 0, 0, 0.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .page-banner {

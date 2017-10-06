@@ -1,4 +1,26 @@
 .top {
   background-color: #000;
   height: 60px;
+  color: #fff;
+
+  .top-content {
+    padding-top: 15px;
+
+    h2 {
+      font-size: 1.6rem;
+      line-height: 1.4em;
+    }
+
+    .icons {
+      margin-left: 15px;
+
+      a.social {
+        img {
+          display: inline-block;
+          padding: 0;
+          margin: 0 0 0 16px;
+        }
+      }
+    }
+  }
 }
