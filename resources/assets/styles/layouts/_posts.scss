@@ -1,0 +1,51 @@
+.posts-container,
+.posts-single-container {
+  h1 {
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    color: $branding-orange;
+  }
+
+  h3 {
+    color: $branding-orange;
+  }
+
+  article.post,
+  article.jetpack-portfolio {
+    margin-bottom: 15px;
+
+    .post-meta {
+      background: #efefef;
+      padding-top: 15px;
+
+      .updated {
+        .day {
+          text-align: center;
+          font-size: 44px;
+          line-height: 1em;
+          font-weight: 900;
+          color: $branding-orange;
+          margin-bottom: -5px;
+        }
+
+        .month-year {
+          text-align: center;
+          font-size: 0.8em;
+          text-transform: uppercase;
+        }
+      }
+
+      .comments {
+        font-size: 0.8em;
+        color: $branding-orange;
+      }
+    }
+  }
+
+  footer {
+    padding-top: 15px;
+    border-top: 1px solid $border-light;
+  }
+}

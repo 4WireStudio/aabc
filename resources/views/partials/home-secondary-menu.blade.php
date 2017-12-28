@@ -1,5 +1,5 @@
 @if (is_front_page())
-<div class="home-secondary-controls container">
+<div class="home-secondary-controls container d-none d-lg-block">
 
 @php
   wp_nav_menu([

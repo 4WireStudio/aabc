@@ -97,8 +97,8 @@ add_action('widgets_init', function () {
         'id'            => 'sidebar-bottom'
     ] + $config);
     register_sidebar([
-        'name'          => __('Bottom', 'sage'),
-        'id'            => 'sidebar-bottom'
+        'name'          => __('Trailing Content', 'sage'),
+        'id'            => 'sidebar-trailing-content'
     ] + $config);
     register_sidebar([
         'name'          => __('Footer Primary', 'sage'),

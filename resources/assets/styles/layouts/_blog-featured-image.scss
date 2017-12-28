@@ -13,8 +13,13 @@
     height: 100%;
     overflow: hidden;
     top: 0;
+    left: 0;
     z-index: 100;
     border: 0;
     outline: 0;
+  }
+
+  .wp-post-image {
+    margin: 0;
   }
 }

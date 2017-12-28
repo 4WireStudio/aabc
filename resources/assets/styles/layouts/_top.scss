@@ -5,6 +5,8 @@
 
   .top-content {
     padding-top: 15px;
+    padding-left: 1px;
+    padding-right: 1px;
 
     h2 {
       font-size: 1.6rem;
@@ -19,6 +21,33 @@
           display: inline-block;
           padding: 0;
           margin: 0 0 0 16px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    height: 40px;
+
+    .top-content {
+      padding-top: 10px;
+      padding-right: 15px;
+
+      h2 {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+      }
+
+      .icons {
+        margin-left: 12px;
+        position: relative;
+        top: -6px;
+
+        a.social {
+          img {
+            margin: 0 0 0 6px;
+            transform: scale(0.75);
+          }
         }
       }
     }

@@ -26,8 +26,20 @@
 @import "layouts/tinymce";
 @import "layouts/home-banner";
 @import "layouts/home-secondary-menu";
-@import "layouts/featured-image";
+@import "layouts/page-featured-image";
+@import "layouts/blog-featured-image";
+@import "layouts/galleries";
+
+html,
+body {
+  background: $black;
+}
 
 body {
   @include lato-font-face('medium');
+}
+
+h1 {
+  color: $branding-orange;
+  border-bottom: 1px solid $border-light;
 }

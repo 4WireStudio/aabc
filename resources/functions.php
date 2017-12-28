@@ -58,7 +58,7 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'admin', 'wp-bootstrap-navwalker', 'simple-cols-navwalker']);
+}, ['helpers', 'setup', 'filters', 'admin', 'wp-bootstrap-navwalker', 'simple-cols-navwalker', 'cta-navwalker']);
 
 /**
  * Here's what's happening with these hooks:
@@ -90,3 +90,84 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+function jetpackcom_custom_form_redirect( $redirect, $id, $post_id ) {
+
+    $redirects = array(
+        '1370' => home_url( 'page_on_your_site' ),
+    );
+ 
+    // Let's loop though each custom redirect.
+    foreach ( $redirects as $origin => $destination ) {
+        if ( $id == $origin ) {
+            return $destination;
+        }
+    }
+ 
+    // Default Redirect for all the other forms.
+    return "/contact/thank-you";
+}
+add_filter( 'grunion_contact_form_redirect_url', 'jetpackcom_custom_form_redirect', 10, 3 );
+
+
+//Add shortcode for page title
+function shortcode_title( ){
+   return get_the_title();
+}
+add_shortcode( 'page_title', 'shortcode_title' );
+
+//Add shortcode for page url
+function shortcode_page_url( ){
+   return get_page_link();
+}
+add_shortcode( 'page_url', 'shortcode_page_url' );
+
+
+
+
+//Integrate Advanced Custom Fields plugin with theme
+add_filter('acf/settings/path', 'acf_settings_path');
+function acf_settings_path( $path ) {
+    $path = get_stylesheet_directory() . '/plugins/advanced-custom-fields/';
+    return $path;
+}
+add_filter('acf/settings/dir', 'acf_settings_dir');
+function my_acf_settings_dir( $dir ) {
+    $dir = get_stylesheet_directory_uri() . '/plugins/advanced-custom-fields/';
+    return $dir;
+}
+// add_filter('acf/settings/show_admin', '__return_false');
+include_once( get_stylesheet_directory() . '/plugins/advanced-custom-fields/acf.php' );
+
+
+
+//Add services schema to clild pages of "Services" page
+function services_schema() {
+    $page = get_queried_object();
+    $parent_page_name = get_the_title( $page->post_parent);
+    if ($parent_page_name == "Services") {
+        echo "
+            <script type=\"application/ld+json\">
+                {
+                    \"@context\": \"http://schema.org/\",
+                    \"@type\": \"Service\",
+                    \"serviceType\": \"" . get_the_title() . "\",
+                    \"provider\": {
+                        \"@type\": \"GeneralContractor\",
+                        \"name\": \"Above & Beyond Contractors\"
+                    },
+                    \"areaServed\": {
+                        \"@type\": \"State\",
+                        \"name\": \"Connecticut\"
+                    },
+                    \"url\": \"" . get_page_link() . "\",
+                    \"logo\": \"https://www.aboveandbeyondcontractors.com/wp-content/themes/aabc/resources/assets/images/logo.png\",
+                    \"image\": \"https://www.aboveandbeyondcontractors.com/wp-content/themes/aabc/resources/assets/images/card.png\",
+                    \"sameAs\": \"https://www.facebook.com/aboveandbeyondcontractors\",
+                    \"sameAs\": \"https://twitter.com/AABContractors\"
+                }
+            </script>
+        ";
+    }
+}

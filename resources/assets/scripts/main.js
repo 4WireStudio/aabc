@@ -34,6 +34,17 @@ jQuery(document).ready(function(){
   });
 });
 
+jQuery(document).ready(function(){
+  jQuery('.page-banner').slick({
+    arrows: false,
+    fade: true,
+    dots: false,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 8000,
+  });
+});
+
 // Add Slide Effect to Bootstrap navbar dropdowns
 $('.dropdown').on('show.bs.dropdown', function(){
   $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300);
@@ -44,4 +55,39 @@ $('.dropdown').on('hide.bs.dropdown', function(){
 });
 
 // Anchor rightmost navbar items containing dropdowns to rightside of parent
-$('ul#menu-top-main .nav-item:last-child .dropdown-menu').addClass( "dropdown-menu-right" );
+$('ul#menu-top-main .nav-item:last-child .dropdown-menu').addClass("dropdown-menu-right");
+
+// Add Bootstrap classes to contact form buttons
+$('.contact-submit :submit').addClass("btn btn-outline-primary btn-lg");
+
+
+
+
+
+// Make primary navbar sticky
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 60) {
+       $('.primary-controls').addClass('fixed-header');
+       $('.smoother').addClass('transition');
+    }
+    else {
+       $('.primary-controls').removeClass('fixed-header');
+       $('.smoother').removeClass('transition');
+    }
+});
+
+//$('.contact-form input[type=text]').attr('placeholder', $("label[for='"+$(this).attr('id')+"']").html());
+
+$('.contact-form input[type=text]').each(function() {
+  $(this).attr('placeholder', $("label[for='"+$(this).attr('id')+"']").html().replace('<span>(required)</span>',' '));
+});
+$('.contact-form input[type=email]').each(function() {
+  $(this).attr('placeholder', $("label[for='"+$(this).attr('id')+"']").html().replace('<span>(required)</span>',' '));
+});
+
+$('.contact-form label').hide();
+
+
+
+// ADD BTN CLASSES TO SUBMIT BUTTONS
+$('input.submit').addClass("btn btn-primary");

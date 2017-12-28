@@ -1,6 +1,8 @@
 footer.site-footer {
   background: #000;
   color: #fff;
+  position: relative;
+  z-index: 300;
 
   h3 {
     padding: 20px 0 7px;

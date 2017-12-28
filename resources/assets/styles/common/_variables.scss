@@ -84,7 +84,9 @@ $theme-colors: (
 );
 
 /* GRADIENT COLORS */
-$content-gradient: rgba(113, 108, 105, 0.5);
+
+/* $content-gradient: rgba(113, 108, 105, 0.5); */
+$content-gradient: rgba(0, 0, 0, 0.5);
 $content-gradient-2: rgba(113, 108, 105, 0);
 
 /* DEFAULT RADIUS */
@@ -117,9 +119,12 @@ $line-height-base: 1.5 !default;
 */
 
 /* HEADINGS */
-$h1-font-size: 24px;
+$h1-font-size: 30px;
 $h2-font-size: 20px;
 $h3-font-size: 18px;
 $h4-font-size: 16px;
 $h5-font-size: 14px;
 $h6-font-size: 13px;
+
+/* HEADER */
+$sticky-nav-timing: 0.2s linear;
